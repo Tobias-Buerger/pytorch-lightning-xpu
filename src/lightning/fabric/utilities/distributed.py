@@ -291,7 +291,6 @@ def _init_dist_connection(
     log.info(f"Initializing distributed: GLOBAL_RANK: {global_rank}, MEMBER: {global_rank + 1}/{world_size}")
 
     if torch_distributed_backend.lower() == "ccl":
-        import oneccl_bindings_for_pytorch
         pass
 
     torch.distributed.init_process_group(torch_distributed_backend, rank=global_rank, world_size=world_size, **kwargs)
