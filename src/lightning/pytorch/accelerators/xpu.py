@@ -16,6 +16,7 @@ from typing import Any, Dict, List
 
 import torch
 from lightning_utilities.core.imports import RequirementCache
+from lightning.fabric.accelerators import _AcceleratorRegistry
 from typing_extensions import override
 
 from lightning.fabric.utilities.types import _DEVICE
